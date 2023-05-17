@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MonitoringController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+}); 
+
+Route::get('/monitor', [MonitoringController::class, "index"]); 
+
